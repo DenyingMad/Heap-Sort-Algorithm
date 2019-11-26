@@ -1,4 +1,0 @@
-﻿  Source.cpp
-C:\Users\Даниил\source\repos\Heap Sort\Source.cpp(6,14): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-C:\Users\Даниил\source\repos\Heap Sort\Source.cpp(50,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Heap Sort.vcxproj -> C:\Users\Даниил\source\repos\Heap Sort\Debug\Heap Sort.exe
