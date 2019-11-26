@@ -2,17 +2,17 @@
 #include <ctime>
 using namespace std;
 
-int iParent(int i) {
+int iParent(const int& i) {
 	return floor((i - 1) / 2);
 }
-int iLeftChild(int i) {
+int iLeftChild(const int& i) {
 	return 2 * i + 1;
 }
-int iRightChild(int i) {
+int iRightChild(const int& i) {
 	return 2 * i + 2;
 }
 
-void siftDown(int a[], int start, int end) {
+void siftDown(int a[], const int& start, const int& end) {
 	int root = start;
 	while (iLeftChild(root) <= end) {
 		int child = iLeftChild(root);
@@ -29,14 +29,14 @@ void siftDown(int a[], int start, int end) {
 		}
 	}
 }
-void heapify(int a[], int count) {
+void heapify(int a[], const int& count) {
 	int start = iParent(count - 1);
 	while (start >= 0) {
 		siftDown(a, start, count - 1);
 		start--;
 	}
 }
-void heapSort(int a[], int count) {
+void heapSort(int a[], const int& count) {
 	heapify(a, count);
 	int end = count - 1;
 	while (end > 0) {
@@ -51,7 +51,7 @@ int main() {
 	int N = 0 + rand() % 30;
 	int* array = new int[N];
 	for (int i = 0; i < N; i++) {
-		array[i] = rand();
+		array[i] = rand() % 1000;
 	}
 	//const int N = 5;
 	//int array[N] = { 14, 9, 6, 23, 2 };
